@@ -1,36 +1,34 @@
 import React from 'react';
-import Navbar from '../components/LandingPageSix/Navbar';
-import MainBanner from '../components/LandingPageSix/MainBanner'; 
-import Services from '../components/LandingPageSix/Services';
-import AboutMe from '../components/LandingPageSix/AboutMe';
-import FunFacts from '../components/LandingPageSix/FunFacts';
-import Pricing from '../components/LandingPageSix/Pricing';
-import BlogPost from '../components/LandingPageSix/BlogPost';
-import Testimonials from '../components/LandingPageSix/Testimonials';
-import ContactForm from '../components/LandingPageSix/ContactForm';
-import Footer from '../components/LandingPageSix/Footer';
-import Gallery from '../components/LandingPageSix/Gallery';
-import Partners from '../components/LandingPageSix/Partners';
- 
-const Index6 = () => {
-    return (
-        <React.Fragment> 
-            <div className="body-bg-five">
-                <Navbar />
-                <MainBanner />
-                <AboutMe />
-                <Services />
-                <FunFacts />
-                <Gallery />
-                <Pricing />
-                <Testimonials />
-                <Partners />
-                <BlogPost />
-                <ContactForm />
-                <Footer />
-            </div>
-        </React.Fragment>
-    )
-}
+import Navbar from '../components/LandingPageFive/Navbar';
+import MainBanner from '../components/LandingPageFive/MainBanner';
+import CaseStudy from '../components/LandingPageFive/CaseStudy';
+import Services from '../components/LandingPageFive/Services';
+import AboutMe from '../components/LandingPageFive/AboutMe';
+import FunFacts from '../components/LandingPageFive/FunFacts';
+import Pricing from '../components/LandingPageFive/Pricing';
+import BlogPost from '../components/LandingPageFive/BlogPost';
+import Testimonials from '../components/LandingPageFive/Testimonials';
+import ContactForm from '../components/LandingPageFive/ContactForm';
+import Footer from '../components/LandingPageFive/Footer';
 
-export default Index6;
+const Index5 = () => {
+  return (
+    <React.Fragment>
+      <div className="body-bg-five">
+        <Navbar />
+        <MainBanner />
+        <CaseStudy />
+        {/* <Services /> */}
+        {/* <AboutMe /> */}
+        {/* <FunFacts /> */}
+        {/* <Pricing /> */}
+        {/* <BlogPost /> */}
+        {/* <Testimonials /> */}
+        {/* <ContactForm /> */}
+        {/* <Footer /> */}
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default Index5;

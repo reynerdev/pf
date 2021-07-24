@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	var installedModules = require('../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,23 +88,82 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "KqAr");
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "KqAr":
+/***/ "1muL":
+/***/ (function(module, exports) {
+
+module.exports = require("nodemailer");
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("oLF9");
+
+
+/***/ }),
+
+/***/ "DRNh":
+/***/ (function(module, exports) {
+
+module.exports = require("nodemailer-sendgrid-transport");
+
+/***/ }),
+
+/***/ "oLF9":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var nodemailer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("1muL");
+/* harmony import */ var nodemailer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nodemailer__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var nodemailer_sendgrid_transport__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("DRNh");
+/* harmony import */ var nodemailer_sendgrid_transport__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nodemailer_sendgrid_transport__WEBPACK_IMPORTED_MODULE_1__);
 
-    
 
-    /* harmony default export */ __webpack_exports__["default"] = (function (ctx) {
-      return Promise.all([])
-    });
-  
+const transporter = {
+  auth: {
+    // Use SendGrid API key 
+    api_key: '##'
+  }
+};
+const mailer = nodemailer__WEBPACK_IMPORTED_MODULE_0___default.a.createTransport(nodemailer_sendgrid_transport__WEBPACK_IMPORTED_MODULE_1___default()(transporter));
+/* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
+  console.log(req.body);
+  const {
+    name,
+    email,
+    number,
+    subject,
+    text
+  } = req.body;
+  const data = {
+    to: 'yourdomain@gmail.com',
+    from: email,
+    subject: 'Hi there',
+    text: text,
+    html: `
+            <b>From:</b> ${name} <br /> 
+            <b>Number:</b> ${number} <br /> 
+            <b>Subject:</b> ${subject} <br /> 
+            <b>Text:</b> ${text} 
+        `
+  };
+
+  try {
+    const response = await mailer.sendMail(data);
+    console.log(response);
+    res.status(200).send("Email send successfully");
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Error proccessing charge");
+  }
+});
 
 /***/ })
 

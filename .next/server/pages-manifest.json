@@ -1,7 +1,20 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/api/contact": "pages/api/contact.js",
+  "/blog-details": "pages/blog-details.html",
+  "/blog": "pages/blog.html",
+  "/case-study-details": "pages/case-study-details.html",
+  "/case-study": "pages/case-study.html",
+  "/index-2": "pages/index-2.html",
+  "/index-3": "pages/index-3.html",
+  "/index-4": "pages/index-4.html",
+  "/index-backup": "pages/index-backup.html",
+  "/index-backup2": "pages/index-backup2.html",
+  "/": "pages/index.html",
+  "/service-details": "pages/service-details.html",
+  "/work-details": "pages/work-details.html",
+  "/works": "pages/works.html",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+  "/404": "pages/404.html"
 }

@@ -1,14 +1,8 @@
 {
-  "./dev/noop": [
-    {
-      "id": "./node_modules/next/dist/client/dev/noop.js",
-      "file": "static/chunks/0.js"
-    }
-  ],
   "react-owl-carousel3": [
     {
-      "id": "./node_modules/react-owl-carousel3/lib/OwlCarousel.js",
-      "file": "static/chunks/1.js"
+      "id": "Rst5",
+      "file": "static/chunks/4.934d3e2d644caad9d4c7.js"
     }
   ]
 }

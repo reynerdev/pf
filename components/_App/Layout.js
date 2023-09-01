@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import GoTop from './GoTop';
-import Preloader from './Preloader';
+import React from "react";
+import Head from "next/head";
+import GoTop from "./GoTop";
+import Preloader from "./Preloader";
 
 const Layout = ({ children }) => {
   // Preloader
@@ -14,7 +14,12 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Reyner portafolio template</title>
+        <title>Reyner Loza - Software Engineer</title>
+        <meta
+          property="og:description"
+          content="Skilled Fullstack in Javascript, React, Typescript, NextJS, AWS Serverless. Check out my portfolio to see my latest projects."
+        />
+        <meta name="og:locale" content="en_US" />
       </Head>
 
       {children}
